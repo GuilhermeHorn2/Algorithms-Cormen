@@ -23,6 +23,9 @@ public class main_misc {
 	
 	System.out.println(arr);
 		
+	insertion_sort_inverse(arr);
+	
+	System.out.println(arr);
 		
 	}
 	
@@ -33,7 +36,26 @@ public class main_misc {
 			int key = arr.get(i);
 			
 			int j = i-1;
-			while(j > 0 && arr.get(j) > key){
+			while(j >= 0 && arr.get(j) > key){
+				arr.set(j+1,arr.get(j));
+				arr.set(j,key);
+				j--;
+			}
+			
+			
+		}
+		
+		
+	}
+	
+	private static void insertion_sort_inverse(List<Integer> arr){
+		
+		for(int i = 1;i < arr.size();i++){
+			
+			int key = arr.get(i);
+			
+			int j = i-1;
+			while(j >= 0 && arr.get(j) < key){
 				arr.set(j+1,arr.get(j));
 				arr.set(j,key);
 				j--;
