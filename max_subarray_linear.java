@@ -64,7 +64,9 @@ public class main_misc {
 						strt = i;
 						acc_max = x;
 					}
-					acc_max += x;
+					else {
+						acc_max += x;
+					}
 					can_sum = true;
 				}
 				
